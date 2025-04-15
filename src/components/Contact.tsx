@@ -33,9 +33,9 @@ const Contact = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          service_id: "service_id", // Replace with your EmailJS service ID
-          template_id: "template_id", // Replace with your EmailJS template ID
-          user_id: "public_key", // Replace with your EmailJS public key
+          service_id: "service_6wfb8ws", // Replace with your EmailJS service ID
+          template_id: "template_e2w5r5h", // Replace with your EmailJS template ID
+          user_id: "TUvu6GuGkSv-vx129", // Replace with your EmailJS public key
           template_params: {
             from_name: formData.name,
             from_email: formData.email,
@@ -61,6 +61,7 @@ const Contact = () => {
           message: ""
         });
       } else {
+        console.log(response);
         throw new Error("Failed to send message");
       }
     } catch (error) {
